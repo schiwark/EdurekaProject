@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: Sushant Chiwarkar
+  become: yes
+  tasks:
+    - name: Install packages
+      apt: name= state=present
+      with_items:
+          - git-core
+          - chromedriver
+          - python-pip
